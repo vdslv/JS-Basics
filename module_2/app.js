@@ -1,8 +1,7 @@
 // Currying
 const mergeWords = first => second => third => fourth => () => `${first} ${second} ${third} ${fourth}`;
 
-console.log(mergeWords('GNU')('is')('not')('Unix.')()); // Output: ‘GNU is not Unix.’ 
-
+console.log(mergeWords('GNU')('is')('not')('Unix.')()); // Output: ‘GNU is not Unix.’
 
 // Every/Some
 let goodUsers = [ 
@@ -17,15 +16,13 @@ let testAllValid = checkUsersValid(goodUsers)
 testAllValid([ 
     { id: 2 }, 
     { id: 1 } 
-]); // Output: true 
-
+]); // Output: true
 
 testAllValid([ 
     { id: 2 }, 
     { id: 4 }, 
     { id: 1 } 
-]); // Output: false 
-
+]); // Output: false
 
 // Reduce
 const inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']; 
@@ -35,8 +32,7 @@ const countWords = (arr) => arr.reduce((acc, el) =>  {
     return acc;
 }, {})
 
-console.log(countWords(inputWords)); // Output: { ‘Apple’: 2, ‘Banana’: 1, ‘Durian’: 3 } 
-
+console.log(countWords(inputWords)); // Output: { ‘Apple’: 2, ‘Banana’: 1, ‘Durian’: 3 }
 
 // Palindrome
 const isPalindrome = (str) => {
@@ -46,8 +42,7 @@ const isPalindrome = (str) => {
 }
 
 console.log(isPalindrome('madam')); // Output: ‘The entry is a palindrome’ 
-console.log(isPalindrome('fox')); // Output: ‘Entry is not a palindrome’ 
-
+console.log(isPalindrome('fox')); // Output: ‘Entry is not a palindrome’
 
 // Recursion
 const factorial = number => {
@@ -58,32 +53,14 @@ const factorial = number => {
     }
 }
 
-console.log(factorial(5)); // Output: 120 
+console.log(factorial(5)); // Output: 120
 
-
-const amountToCoins = (n, arr) => {
-    let result = [];
-    let checkCoinSum = 0;
-
-    const addCoin = (coin) => {
-        if (checkCoinSum + coin <= n) {
-           checkCoinSum += coin;
-           result.push(coin);
-           addCoin(coin);
-       } else if (checkCoinSum + coin > n) {
-           return;
-       }
-   }
-
-    for (const key of arr) {
-        addCoin(key)
-    }
-
-    return result;
+const amountToCoins = (sum, coins) => {
+    const coin = coins.find((coin) => sum - coin >= 0);
+    return coin ? [coin, ...amountToCoins(sum - coin, coins)] : [];
 };
 
-console.log(amountToCoins(46, [25, 10, 5, 2, 1])); // Output: [25, 10, 10, 1] 
-
+console.log(amountToCoins(46, [25, 10, 5, 2, 1])); // Output: [25, 10, 10, 1]
 
 const repeat = (fn, number) => {
     if(number < 1) {
@@ -93,8 +70,7 @@ const repeat = (fn, number) => {
     }
 }
 
-repeat(() => console.log('Wassup'), 5); // Function should output ‘Wassup’ 5 times 
-
+repeat(() => console.log('Wassup'), 5); // Function should output ‘Wassup’ 5 times
 
 function reduce(arr, cb, acc) {
     let result = acc;
