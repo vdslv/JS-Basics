@@ -62,7 +62,7 @@ class Group {
     }
 
     has(value) {
-        return this.group.includes(value) ? true : false
+        return this.group.includes(value);
     }
 
     add(value) {
