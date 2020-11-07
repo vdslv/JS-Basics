@@ -60,7 +60,6 @@ new Speaker("Mr. Calm").speak("easy, man");
 new Screamer("Mr. Loud").speak("hell yeah"); 
 // → “Mr. Loud shouts HELL YEAH” 
 
-
 // ----------------- The Reading List ----------------------
 class BookList {
     booksFinished = 0;
@@ -108,7 +107,6 @@ class BookList {
 
         this.books.push(book);
     }
-
 }
 
 class Book {
