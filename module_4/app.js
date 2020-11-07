@@ -137,4 +137,4 @@ list.add(book2);
 list.add(book3);
 list.finishCurrentBook();
 
-// console.log(list);
+console.log(list);
