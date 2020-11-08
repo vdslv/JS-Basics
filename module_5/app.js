@@ -88,7 +88,6 @@ function* fibonacci(number) {
             yield result[i] = result[i - 2] + result[i - 1]
         }
     }
-
 }
 
 let [...first10] = fibonacci(10);
