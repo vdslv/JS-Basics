@@ -76,9 +76,17 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)])
 
 // --------------------  Fibonacci ---------------------
 function* fibonacci(number) {
-    let result = [0, 1];
-    for (let i = 2; i < number; i++) {
-        yield result[i] = result[i - 2] + result[i - 1]
+    let result = [];
+    for (let i = 0; i < number; i++) {
+        if (i === 0) {
+            result[i] = 0;
+            yield result[i];
+        } else if (i === 1) {
+            result[i] = 1;
+            yield result[i];
+        } else {
+            yield result[i] = result[i - 2] + result[i - 1]
+        }
     }
 
 }
