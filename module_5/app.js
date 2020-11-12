@@ -42,9 +42,7 @@ function Promise_all(promises) {
                             resolve(result);
                         }
                     })
-                    .catch(err => {
-                        reject(new Error(err));
-                    })
+                    .catch(err => reject(err));
             })
         };
     });
