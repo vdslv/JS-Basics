@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img  {
+    width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+#main {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resize {
+    border-radius: 10px;
+    border: 1px solid beige;
+    padding: 15px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+#resize-block {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+#search-block {
+    display: flex;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+#textarea {
+    resize: none;
+}
+
+#display {
+    margin-left: 20px;
+    border: 1px solid black;
+    width: 200px;
+    padding: 5px;
+}
+
+#type-word {
+    margin-bottom: 10px;
+}
+
+#gallery-wrapper {
+    margin-top: 20px;
+    border: 1px solid palegreen;
+    background-color: moccasin;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#top-block {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+#add {
+    margin: 0 10px;
+    padding: 0 5px;
+}
+
+#image {
+    height: 320px;
+    width: 520px;
+}
+
+#timer-block {
+    margin-left: 20px;
+}
+
+#timer {
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+#bottom-block {
+    position: relative;
+    margin-top: 20px;
+}
+
+.arrow-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 32px;
+    position: absolute;
+}
+
+.arrow-button__left {
+    top: 45%;
+    left: 3%;
+}
+
+.arrow-button__right {
+    top: 45%;
+    right: 4%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#table-wrapper {
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 5px 35px;
+}
+
+.delete-icon {
+    width: 15px;
+}
+
+.icon-wrapper {
+    padding: 5px 10px;
+}
+
+.add-row {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}

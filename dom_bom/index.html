@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <div id="resize-block">
+        <div class="resize">
+          <p id="width"></p>
+          <p id="height"></p>
+        </div>
+        <div id="search-block">
+          <div id="inputs">
+            <input id="type-word" type="text" />
+            <textarea name="word" id="textarea" cols="30" rows="10"></textarea>
+          </div>
+          <p id="display"></p>
+        </div>
+      </div>
+      <div id="gallery-wrapper">
+        <div id="top-block">
+          <input id="img-url" type="text" />
+          <button id="add">Add</button>
+          <div id="timer-block">
+            Timer (sec):
+            <input id="timer" type="number" min="1" />
+          </div>
+        </div>
+        <div id="bottom-block">
+          <button class="arrow-button arrow-button__left"><</button>
+          <img id="image" src="" alt="image" />
+          <button class="arrow-button arrow-button__right">></button>
+        </div>
+      </div>
+      <div id="table-wrapper">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th colspan="2">Surname</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <button class="add-row">Add row</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
