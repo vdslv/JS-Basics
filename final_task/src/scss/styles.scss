@@ -1,0 +1,89 @@
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: dodgerblue;
+}
+
+main {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+#header {
+  color: white;
+  font-size: 24px;
+  max-width: 650px;
+  @include centered-flex;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  &__search {
+    @include default-input(white, 3px 0);
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+#new-task {
+  margin-top: 50px;
+  @include centered-flex;
+  justify-content: center;
+
+  &__btn {
+    padding: 12px 24px;
+    font-size: 17px;
+    box-shadow: -1.5px 2px 6px lightgrey;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__input {
+    @include default-input(lightgrey, 10px 0);
+    margin-right: 60px;
+    width: 450px;
+
+    &::placeholder {
+      color: lightgrey;
+    }
+  }
+}
+
+.sorting-dropdown {
+  @include default-dropdown;
+}
+
+.tasks {
+
+  &__done,
+  &__open {
+    @include column-reversed
+  }
+
+  &__clear {
+    text-decoration: underline;
+    text-align: right;
+    margin-top: 15px;
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}

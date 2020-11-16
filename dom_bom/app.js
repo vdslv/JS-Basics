@@ -59,7 +59,7 @@ inputText.addEventListener("input", findWord);
 // ----------  Images slider  -----------
 const addImgBtn = document.getElementById("add");
 const imageDisplay = document.getElementById("image");
-const imageUrl = document.getElementById("img-url");
+const imageUrl = document.getElementById("images-url");
 const timer = document.getElementById("timer");
 const btnRight = document.querySelector(".arrow-button__right");
 const btnLeft = document.querySelector(".arrow-button__left");
@@ -154,6 +154,7 @@ const addRowBtn = document.querySelector(".add-row");
 const tableBody = document.getElementById("tbody");
 
 let rowIdsGenerator = 0;
+let inputIdsGenerator = 0;
 let fieldInEdit = false;
 const editedFieldValue = {
   element: null,
@@ -167,7 +168,15 @@ function editInput(tdElement) {
   fieldInEdit = true;
   const defaultValue = tdElement.innerText;
   editedFieldValue.element = tdElement;
-  tdElement.innerHTML = `<input type="text" value="${defaultValue}" oninput="assignValue(this)"/>`;
+  editedFieldValue.value = defaultValue;
+  ++inputIdsGenerator;
+  tdElement.innerHTML = `<input id="input-${inputIdsGenerator}"
+     type="text"
+     value="${defaultValue}"
+     oninput="assignValue(this)" />
+    `;
+
+  document.getElementById(`input-${inputIdsGenerator}`).focus();
 }
 
 function assignValue(input) {
@@ -178,6 +187,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && fieldInEdit) {
     fieldInEdit = false;
     editedFieldValue.element.innerHTML = editedFieldValue.value;
+    editedFieldValue.value = "";
   }
 });
 

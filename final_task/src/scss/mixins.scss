@@ -1,0 +1,30 @@
+@mixin centered-flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin default-input($border-color, $padding) {
+  font-size: 18px;
+  font-weight: 300;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  padding: $padding;
+}
+
+@mixin default-dropdown {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 16px;
+  padding: 5px 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin column-reversed {
+  display: flex;
+  flex-direction: column-reverse;
+}
