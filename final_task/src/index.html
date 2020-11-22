@@ -22,7 +22,7 @@
         <div class="tasks">
           <div class="tasks__sort">
             <span>Open</span>
-            <select class="sorting-dropdown">
+            <select id="tasks__sorted-open" class="sorting-dropdown" onchange="sortTasks('open', this)">
               <option value="Date creation (Asc)">Date creation (Asc)</option>
               <option value="Date creation (Desc)">Date creation (Desc)</option>
               <option value="Text (Asc)">Text (Asc)</option>
@@ -30,18 +30,18 @@
             </select>
           </div>
           <div class="tasks__open"></div>
-          <p class="tasks__open-clear tasks__clear">Clear "Open" list</p>
+          <p class="tasks__open-clear tasks__clear" onclick="clearTodoTasks()">Clear "Open" list</p>
           <div class="tasks__sort">
             <span>Done</span>
-            <select class="sorting-dropdown">
-              <option value="Date creation (Asc)">Date creation (Asc)</option>
-              <option value="Date creation (Desc)">Date creation (Desc)</option>
+            <select id="tasks__sorted-done" class="sorting-dropdown" onchange="sortTasks('done', this)">
+              <option value="Date completed (Asc)">Date completed (Asc)</option>
+              <option value="Date completed (Desc)">Date completed (Desc)</option>
               <option value="Text (Asc)">Text (Asc)</option>
               <option value="Text (Desc)">Text (Desc)</option>
             </select>
           </div>
           <div class="tasks__done"></div>
-          <p class="tasks__done-clear tasks__clear">Clear "Done" list</p>
+          <p class="tasks__done-clear tasks__clear" onclick="clearDoneTasks()">Clear "Done" list</p>
         </div>
       </div>
     </main>
